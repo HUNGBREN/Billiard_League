@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billiard League</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon"  href="/src/icons/favicon_bia.png">
+    <link rel="stylesheet" href="/libs/owl_carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/libs/owl_carousel/owl.theme.default.min.css">
 </head>
 <body>
     <div class="container">
         <header class="menu_bar bg_primary_section">
+            <div class="mobile_menu">
+                <a href="index.html">Billiard League</a>
+                <button class="mini_bar"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            
             <nav class="main_menu">
                 <ul>
                     <li>
-                        <a href="#"> News </a>
+                        <a href="news.html"> News </a>
                     </li>
                     <li>
                         <a href="#"> Schedule </a>
                     </li>
                     <li>
-                        <a href="#"> World Rankings </a>
+                        <a href="#"> Rankings </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="home_page_name">Billiard <span>League</span></div>
+                        <a href="index.html">
+                            <div class="home_page_name">
+                                <div class="image" style="background-image: url(src/icons/favicon_bia.png)"></div>
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#"> Event Tickets</a>
+                        <a href="#"> Tickets</a>
                     </li>
                     <li> <a href="#"> Pool Club </a></li>
                     <li> <a href="#"> About us </a></li>
@@ -44,6 +54,7 @@
 
             <section class="event_section">
                 <h3>NEXT EVENT</h3>
+                <hr class="border_bottom">
                 <h2>UK OPEN</h2>
                 <h4>MAY 30 - JUNE 4, 2023 <br>
                     COPPER BOX ARENA, LONDON</h4>
@@ -53,9 +64,27 @@
 
             <section class="latest_news bg_secondary_section">
                 <h2>Latest News</h2>
-                <hr class="border_dark">
+                <hr class="border_bottom">
                 <br>
-                <p>news</p>
+                <div class="news_wrapper">
+                    <div class="slider owl-carousel owl-theme">
+                        <div>
+                            <div class="item">content 1</div>
+                        </div>
+                        <div>
+                            <div class="item">content 2</div>
+                        </div>
+                        <div>
+                            <div class="item">content 3</div>
+                        </div>
+                        <div>
+                            <div class="item">content 4</div>
+                        </div>
+                        <div>
+                            <div class="item">content 5</div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     
@@ -65,13 +94,38 @@
             <p>Mascalls, Mascalls Lane, <br>
             Brentwood, Essex, England CM14 5LJ</p>
             <div class="info_footer">
-                <h4>+68 (0)1235 686 868</h4>
-                <h4>match@billiardleague.com</h4>
+                <h4>+68 123 686868</h4>
+                <h4>match@bleague.com</h4>
             </div>
         </footer>
     </div>
     
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+    <!-- <script src="jquery.min.js"></script> -->
+    <script src="/libs/owl_carousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slider').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    786:{
+                        items:2
+                    },
+                    1024:{
+                        items:3
+                    }
+                }
+                });
+        });
+    </script>
 
+    <script src="js/home_page/home_page.js"></script>
 </body>
 </html>
