@@ -1,4 +1,16 @@
-/* ------Tablet------ */
+/* -------------PC------------ */
+
+@media (min-width: 1025px) {
+    .mobile_menu {
+        display: none;
+    }
+    .tickets_container .tickets_image{
+        background-size: contain;
+    }
+}
+
+
+/* -----------Tablet------------ */
 
 @media (max-width: 1024px) {
     .main_menu{
@@ -12,7 +24,7 @@
         justify-content: center;
         align-items: center;
     }
-    .main_menu ul li:nth-child(4){
+    .main_menu ul li:nth-child(3){
         display: none;
     }
     .main_menu ul li{
@@ -28,13 +40,21 @@
         grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     }
 
+    .card_info_players {
+        grid-template: auto / repeat(4, 1fr);
+    }
+
+    .tickets_container{
+        grid-template: auto / repeat(2, 1fr);
+    }
+
     .info_footer{
         display: flex;
         flex-direction: column;
     }
 }
 
-/* ------Mobile------ */
+/* -------------Mobile------------- */
 @media (max-width: 786px) {
     .event_section a{
         display: block;
@@ -46,12 +66,25 @@
         display: grid;
         grid-template: auto / repeat(1, 1fr);
     }
-}
+    .tickets_container{
+        grid-template: auto / repeat(1, 1fr);
+    }
+    .tickets_container .tickets_image{
+        transform: scale(60%);
+    }
 
-/* ------PC------ */
+    .card_info_players {
+        grid-template: auto / repeat(2, 1fr);
+    }
 
-@media (min-width: 1025px) {
-    .mobile_menu {
-        display: none;
+    .prize_item{
+        grid-template: auto / repeat(2, 1fr);
+        grid-gap: 32px;
+    }
+    .prize_item .details_prize{
+        border-left: none !important;
+    }
+    .prize_item .details_prize:nth-child(even){
+    border-left: 1px solid var(--secondary_color) !important;
     }
 }
